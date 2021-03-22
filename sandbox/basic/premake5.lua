@@ -1,14 +1,11 @@
-project "tetra"
-	kind "StaticLib"
+project "sandbox-basic"
+	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++17"
 	staticruntime "on"
 
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/obj/" .. outputdir .. "/%{prj.name}")
-
-    pchheader "src/ttpch.h"
-	pchsource "src/ttpch.cpp"
 
 	files
 	{
@@ -17,19 +14,15 @@ project "tetra"
         "src/**.hpp"
 	}
 
-	defines
-	{
-		"GLFW_INCLUDE_NONE"
-	}
-
 	includedirs
 	{
-		"src",
-        "vendor"
+		"%{wks.location}/tetra/src",
+        "%{wks.location}/tetra/vendor"
 	}
 
 	links
 	{
+		"tetra"
 	}
 
 	filter "configurations:Debug"
