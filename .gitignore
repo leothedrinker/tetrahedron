@@ -35,3 +35,5 @@ bin/
 obj/
 .vscode/
 Makefile
+
+*.log
