@@ -1,3 +1,0 @@
-[submodule "tetra/vendor/spdlog"]
-	path = tetra/vendor/spdlog
-	url = https://github.com/gabime/spdlog.git
