@@ -20,6 +20,8 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {""}
 
 group "Dependencies"
+    include "tetra/vendor"
+
 group ""
 
 include "tetra"

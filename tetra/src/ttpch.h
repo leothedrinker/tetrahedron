@@ -14,6 +14,9 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "common/platform.h"
 #include "common/log/logger.h"
+
+#include "graphics_api/opengl/opengl.h"
 
 #endif

@@ -1,0 +1,3 @@
+[submodule "tetra/vendor/glfw"]
+	path = tetra/vendor/glfw
+	url = https://github.com/glfw/glfw.git

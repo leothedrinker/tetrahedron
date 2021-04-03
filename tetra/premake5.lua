@@ -12,9 +12,9 @@ project "tetra"
 
 	files
 	{
-		"src/**.h",
-		"src/**.cpp",
-        "src/**.hpp"
+		"src/**/**.h",
+		"src/**/**.cpp",
+        "src/**/**.hpp"
 	}
 
 	defines
@@ -25,11 +25,13 @@ project "tetra"
 	includedirs
 	{
 		"src",
-        "vendor"
+        "vendor",
+		"vendor/glfw/include"
 	}
 
 	links
 	{
+		"glfw"
 	}
 
 	filter "configurations:Debug"

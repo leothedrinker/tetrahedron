@@ -17,13 +17,22 @@ project "sandbox-basic"
 	includedirs
 	{
 		"%{wks.location}/tetra/src",
-        "%{wks.location}/tetra/vendor"
+        "%{wks.location}/tetra/vendor",
+		"%{wks.location}/tetra/vendor/glfw/include"
 	}
 
-	links
+	links 
 	{
-		"tetra"
+    	"tetra",
+		"glfw"
 	}
+
+	filter "system:linux"
+    	links
+    	{
+			"pthread",
+			"dl"
+		}
 
 	filter "configurations:Debug"
 		defines "TT_DEBUG"
